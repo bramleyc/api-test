@@ -1,10 +1,10 @@
 version: 1.0
 configuration:
-  has_webserver: true
+  has_webserver: false
   scoring:
-    command: npm install && npm test
+    command: "mvn clean test"
     files:
-      - unit.xml
+      - "target/customReports/result.xml"
     # Define hidden test cases and declare file paths below to evaluate candidates' submissions.
     #
     # Learn more:
@@ -13,12 +13,11 @@ configuration:
     # hidden_files_paths:
     #   - tests/custom_test_[1-2].sh
     #   - app/secret_test
-  readonly_paths:
-    - test/test.js
   ide_config:
     default_open_files:
-      - app.js
+      - src/main/java/com/hackerrank/sample/controller/ModelController.java
+      - src/main/java/com/hackerrank/sample/model/Model.java
     project_menu:
-      run: npm start
-      install: npm install
-      test: npm test
+      run: "mvn clean spring-boot:run"
+      install: "mvn clean install"
+      test: "mvn clean test; cat target/customReports/result.txt"

@@ -11,25 +11,17 @@ This project contains a simple Spring Boot application that simulates a booking 
 
 ### 1. Compile the project
 
-Navigate to the project root directory and run:
+Navigate to the project root directory and run the following:
 
 ```bash
-mvn clean complile
+mvn clean install -DskipTests
 ```
 
-This downloads the dependencies and compiles the code.
+This clears out any previous builds, compiles the code, and creates the distributable package. 
 
-### 2. Create the executable
+We have included `-DskipTests` as we know for this project we have introduced deliberate test failures, and the tests we have written need the Spring Boot application to be up and running. 
 
-Once the dependencies are downloaded and the code is compiled, you can package the application using:
-
-```bash
-mvn package
-```
-
-This takes the compiled code and package it in its distributable format (JAR).
-
-### 3. Start the application
+### 2. Start the application
 
 Now you have a packaged application, we can start our SpringBoot API and start testing.
 
@@ -39,7 +31,7 @@ mvn spring-boot:run
 
 The Spring Boot application will start, and it should be accessible on `http://localhost:8080`. 
 
-### 4. Running Tests
+### 3. Running Tests
 
 With the application running inside, you can execute the tests. This should be run in a new Terminal window.
 

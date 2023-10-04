@@ -16,8 +16,7 @@ configuration:
     default_open_files:
       - src/test/java/com/booking/apitest/ApiApplicationTest.java
     project_menu:
-      compile: "mvn complile"
-      package: "mvn package"
+      install: "mvn clean install -DskipTests"
       run: "mvn clean spring-boot:run"
       test: "mvn clean test"
 

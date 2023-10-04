@@ -4,20 +4,20 @@ configuration:
   scoring:
     command: "mvn clean test"
     files:
-      - "target/customReports/result.xml"
+      - "target/surefire-reports/TEST-com.booking.apitest.ApiApplicationTest.xml"
     # Define hidden test cases and declare file paths below to evaluate candidates' submissions.
     #
     # Learn more:
     # https://support.hackerrank.com/hc/en-us/articles/4761491631635-Hidden-Test-Cases-for-Front-End-Back-End-and-Full-Stack-Questions
     #
-    # hidden_files_paths:
-    #   - tests/custom_test_[1-2].sh
-    #   - app/secret_test
+    hidden_files_paths:
+      - src/test/java/com/booking/apitest/hackerrank/SolutionToApiApplicationTest.java
   ide_config:
     default_open_files:
-      - src/main/java/com/hackerrank/sample/controller/ModelController.java
-      - src/main/java/com/hackerrank/sample/model/Model.java
+      - src/test/java/com/booking/apitest/ApiApplicationTest.java
     project_menu:
+      compile: "mvn complile"
+      package: "mvn package"
       run: "mvn clean spring-boot:run"
-      install: "mvn clean install"
-      test: "mvn clean test; cat target/customReports/result.txt"
+      test: "mvn clean test"
+

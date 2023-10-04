@@ -14,10 +14,10 @@ This project contains a simple Spring Boot application that simulates a booking 
 Navigate to the project root directory and run:
 
 ```bash
-mvn complile
+mvn clean complile
 ```
 
-This
+This downloads the dependencies and compiles the code.
 
 ### 2. Create the executable
 
@@ -37,11 +37,11 @@ Now you have a packaged application, we can start our SpringBoot API and start t
 mvn spring-boot:run
 ```
 
-The Spring Boot application will start, and it should be accessible on `http://localhost:8080`.
+The Spring Boot application will start, and it should be accessible on `http://localhost:8080`. 
 
 ### 4. Running Tests
 
-With the application running inside, you can execute the tests:
+With the application running inside, you can execute the tests. This should be run in a new Terminal window.
 
 ```bash
 mvn test
